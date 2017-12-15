@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD
+  MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+  <generatorConfiguration>
+  <classPathEntry location="C:\Users\lyj\.m2\repository\mysql\mysql-connector-java\5.1.38"/>
+   <context id="DB2Table" targetRuntime="MyBatis3">
+   <commentGenerator>
+   <property name="supperssAllComments" value="true"/>
+   </commentGenerator>
+  <!--  数据库的连接 用户名 密码 -->
+  <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.7.36:3306/t_user" userId="root" password="123456">
+  </jdbcConnection>
+  <javaTypeResolver>
+   <property name="forceBigDecimals" value="false"/>
+  </javaTypeResolver>
+  <!--   生成实体类的包名位置，这里配置将生成的实体类放在com.lyj.pojo这个包之下 -->
+  <javaModelGenerator targetPackage="com.lyj.pojo" targetProject="D:\dev\workspace2\Exercise\src\main\java\com\lyj\pojo">
+  
+  <property name="enableSubPackage" value="true"/>
+   <property name="trimString" value="true"/>
+  </javaModelGenerator>
+   
+  <!--  生成的sql映射文件包名和位置，这里将生成的sql映射文件放在com.lyj.mapping这个包下 -->
+  <sqlMapGenerator targetPackage="com.lyj.mapping" targetProject="D:\dev\workspace2\Exercise\src\main\java\com\lyj\mapping">
+  <property name="enableSubPackage" value="true"/>
+  </sqlMapGenerator>
+ <!--  生成dao的包名和位置，这里配置将生成的dao类放在com.lyj.dao这个包下 -->
+   <javaClientGenerator targetPackage="com.lyj.dao" type="XMLMAPPER" targetProject="D:\dev\workspace2\Exercise\src\main\java\com\lyj\dao" >
+   <property name="enableSubpackage" value="true"/>
+   </javaClientGenerator>
+  <!--  要生成那些表（更改tableName和domainObjectName就可以了） -->
+  <table tableName="t_user" domainObjectName="User" enableCountByExample="fasle" 
+  
+  enableUpdateByExample="false" enableDeleteByExample="false" selectByExampleQueryId="false"></table>
+   
+   </context> 
+  </generatorConfiguration>
+  
+  
+  
+  
+  
+  
+  
+  
+  
